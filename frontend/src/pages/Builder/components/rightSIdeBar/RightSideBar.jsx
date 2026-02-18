@@ -16,7 +16,7 @@ const RightSideBar = ({ isCollapsed, onToggleCollapse }) => {
         collapsible="none"
         variant="sidebar"
         side="left"
-        className="h-full w-full"
+        className="h-full w-full bg-stone-100"
       >
         <SidebarHeader className="border-b border-sidebar-border p-3 mb-2">
           <div className="flex items-center gap-2">
@@ -27,7 +27,7 @@ const RightSideBar = ({ isCollapsed, onToggleCollapse }) => {
               size="icon"
               className="ml-auto h-7 w-7 cursor-pointer"
               onClick={onToggleCollapse}
-              title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+              title={"Collapse sidebar"}
             >
               {isCollapsed ? (
                 <PanelRightOpen className="h-4 w-4" />

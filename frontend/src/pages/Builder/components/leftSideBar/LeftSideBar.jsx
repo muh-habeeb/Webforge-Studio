@@ -11,12 +11,12 @@ import TagSidebarSections from "./components/TagSidebarSections";
 
 const LeftSideBar = ({ isCollapsed, onToggleCollapse }) => {
   return (
-    <Layout>
+    <Layout >
       <Sidebar
         collapsible="none"
         variant="sidebar"
         side="left"
-        className="h-full w-full"
+        className="h-full w-full bg-stone-100 "
       >
         <SidebarHeader className="border-b border-sidebar-border p-3 mb-2">
           <div className="flex items-center gap-2">
@@ -27,7 +27,7 @@ const LeftSideBar = ({ isCollapsed, onToggleCollapse }) => {
               size="icon"
               className="ml-auto h-7 w-7"
               onClick={onToggleCollapse}
-              title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+              title={"Collapse sidebar"}
             >
               {isCollapsed ? (
                 <PanelLeftOpen className="h-4 w-4" />
@@ -38,7 +38,10 @@ const LeftSideBar = ({ isCollapsed, onToggleCollapse }) => {
           </div>
         </SidebarHeader>
         <SidebarContent>
-          <TagSidebarSections />
+
+          {/* componets are defined below comonent */}
+          <TagSidebarSections /> 
+
         </SidebarContent>
         <SidebarFooter className="border-t border-sidebar-border p-2 text-xs text-sidebar-foreground/70">
           other items

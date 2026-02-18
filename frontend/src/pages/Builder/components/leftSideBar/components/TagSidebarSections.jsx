@@ -37,7 +37,7 @@ const TagSidebarSections = () => {
             <button
               type="button"
               onClick={() => toggleSection(section.id)}
-              className="flex w-full items-center justify-between rounded-md px-1 py-1 text-left hover:bg-sidebar-accent"
+              className="flex w-full items-center justify-between rounded-md px-1 py-1 text-left hover:bg-sidebar-accent cursor-pointer transition-all duration-200 "
             >
               <SidebarGroupLabel className="h-auto p-0 text-sm font-semibold text-sidebar-foreground">
                 {section.title}

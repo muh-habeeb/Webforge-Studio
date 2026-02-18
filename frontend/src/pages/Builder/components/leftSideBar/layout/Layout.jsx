@@ -14,3 +14,11 @@ export default function Layout({ children }) {
     </SidebarProvider>
   );
 }
+
+
+/**
+|--------------------------------------------------
+| to adjest background of the sidebar goto the  both side abr page 
+leftsidebar.jsx / right
+|--------------------------------------------------
+*/

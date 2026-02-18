@@ -45,7 +45,10 @@ const MainLayout = () => {
   };
 
   return (
-    <ResizablePanelGroup orientation="horizontal" className="min-h-full border">
+    <ResizablePanelGroup
+      orientation="horizontal"
+      className="min-h-full border "
+    >
       {/* Left sidebar panel */}
       <ResizablePanel
         panelRef={leftPanelRef}
@@ -64,9 +67,9 @@ const MainLayout = () => {
           onToggleCollapse={toggleLeftSidebar}
         />
       </ResizablePanel>
-
+      {/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
       <ResizableHandle withHandle />
-
+      {/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
       {/* Main content area */}
       <ResizablePanel defaultSize="50%">
         <div className="relative flex h-full items-center justify-center p-6">
@@ -78,6 +81,7 @@ const MainLayout = () => {
               size="sm"
               className="absolute top-4 left-4"
               onClick={toggleLeftSidebar}
+              title={"Expand sidebar"}
             >
               <PanelLeftOpen className="mr-2 h-4 w-4" />
             </Button>
@@ -90,6 +94,7 @@ const MainLayout = () => {
               size="sm"
               className="absolute top-4 right-4"
               onClick={toggleRightSidebar}
+              title={"Expand sidebar"}
             >
               <PanelRightOpen className="mr-2 h-4 w-4" />
             </Button>
@@ -97,9 +102,10 @@ const MainLayout = () => {
           <span className="font-semibold">Content</span>
         </div>
       </ResizablePanel>
-
-      <ResizableHandle withHandle /> {/* Handle between main content and right sidebar */}
-
+      {/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
+      <ResizableHandle withHandle />{" "}
+      {/* Handle between main content and right sidebar */}
+      {/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
       {/* Right sidebar panel */}
       <ResizablePanel
         panelRef={rightPanelRef}
