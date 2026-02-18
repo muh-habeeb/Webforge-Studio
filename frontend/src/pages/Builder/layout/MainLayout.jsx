@@ -75,16 +75,16 @@ const MainLayout = () => {
         <div className="relative flex h-full items-center justify-center p-6">
           {/* Show open button when left sidebar is collapsed */}
           {isLeftCollapsed ? (
-            <Button
-              type="button"
-              variant="outline"
-              size="sm"
-              className="absolute top-4 left-4"
-              onClick={toggleLeftSidebar}
-              title={"Expand sidebar"}
-            >
-              <PanelLeftOpen className="mr-2 h-4 w-4" />
-            </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="absolute top-4 left-4"
+                  onClick={toggleLeftSidebar}
+                  title={"Expand sidebar"}
+                >
+                  <PanelLeftOpen className="mr-2 h-4 w-4" />
+                </Button>
           ) : null}
           {/* Show open button when right sidebar is collapsed */}
           {isRightCollapsed ? (

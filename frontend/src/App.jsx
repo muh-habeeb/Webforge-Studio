@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import About from "@/pages/About";
-import Home from "@pages/Home";
-import NotFoundPage from "@pages/NotFoundPage";
+import About from "@pages/About/About";
+import Home from "@pages/Home/Home";
+import NotFoundPage from "@/NotFoundPage";
 import Builder from "@pages/Builder/Builder";
 import Layout from "./layouts/Layout";
 
@@ -29,7 +29,9 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <>
-      <RouterProvider router={router} />
+      <div className="font-montserrat">
+          <RouterProvider router={router} />
+      </div>
     </>
   );
 };

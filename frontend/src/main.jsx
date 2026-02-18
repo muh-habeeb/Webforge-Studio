@@ -13,7 +13,7 @@ import { TooltipProvider } from "@components/ui/tooltip";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <TooltipProvider> */}
-      <App />
+      <App  />
     {/* </TooltipProvider> */}
   </StrictMode>,
 );

@@ -1,11 +1,16 @@
 import { useMemo, useState } from "react"
 import { ChevronDown, ChevronRight } from "lucide-react"
+import { DragDropProvider } from '@dnd-kit/react';
+
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
 } from "@/components/ui/sidebar"
 import { sidebarSections } from "../data/sidebarSections"
+import DraggableTag from "../../ui/DraggableTag";
+
+
 
 const TagSidebarSections = () => {
   const initialState = useMemo(
@@ -25,8 +30,9 @@ const TagSidebarSections = () => {
   }
 
   return (
-    <div className="space-y-2 px-2 pb-2 ">
-      {sidebarSections.map((section) => {
+    <DragDropProvider>
+      <div className="space-y-2 px-2 pb-2">
+        {sidebarSections.map((section) => {
         const isOpen = openSections[section.id]
 
         return (
@@ -53,13 +59,11 @@ const TagSidebarSections = () => {
               <SidebarGroupContent className="mt-2">
                 <div className="grid grid-cols-2 gap-2">
                   {section.tags.map((tag) => (
-                    <button
+                    <DraggableTag
                       key={tag}
-                      type="button"
-                      className="select-none rounded-md border border-sidebar-border bg-sidebar px-2 py-1 text-left text-xs font-medium text-sidebar-foreground hover:bg-sidebar-accent"
-                    >
-                      {`<${tag}>`}
-                    </button>
+                      tag={tag}
+                      sectionId={section.id}
+                    />
                   ))}
                 </div>
               </SidebarGroupContent>
@@ -67,7 +71,8 @@ const TagSidebarSections = () => {
           </SidebarGroup>
         )
       })}
-    </div>
+      </div>
+    </DragDropProvider>
   )
 }
 
