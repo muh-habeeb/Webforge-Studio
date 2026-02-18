@@ -56,7 +56,7 @@ const TagSidebarSections = () => {
                     <button
                       key={tag}
                       type="button"
-                      className="select-none rounded-md border border-sidebar-border bg-sidebar px-2 py-1 text-left text-xs font-medium text-sidebar-foreground hover:bg-sidebar-accent"
+                      className="select-none  rounded-md border border-sidebar-border bg-sidebar px-2 py-1 text-left text-xs font-medium text-sidebar-foreground hover:bg-sidebar-accent"
                     >
                       {`<${tag}>`}
                     </button>

@@ -3,7 +3,7 @@ import MainLayout from "./layout/MainLayout";
 const Builder = () => {
   return (
     <>
-      <aside className="h-screen  bg-red-500 ">
+      <aside className="h-screen ">
        <MainLayout />
       </aside>
     </>
