@@ -1,9 +1,13 @@
-import React from 'react'
+import Footer from "@components/Footer";
+import React from "react";
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <div>
+      <div>About</div>
+      <Footer />
+    </div>
+  );
+};
 
-export default About
+export default About;

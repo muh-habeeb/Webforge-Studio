@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <>
       {" "}
-      <Header />
       <main className="main-content">
         <h1 className="text-4xl font-bold text-center mt-10">
           Welcome to WebForge Studio
